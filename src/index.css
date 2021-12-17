@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header.smaller {
+  height: 75px;
+}
+
+header {
+  width: 100%;
+  height: 10em;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  border-bottom: solid 0.5em #f4f4f4;
+  background-color: #394e63;
+  transition: height 0.3s;
+}

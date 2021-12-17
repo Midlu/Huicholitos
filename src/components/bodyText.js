@@ -11,15 +11,17 @@ function BodyText() {
   return (
     <React.Fragment>
       <Hero name="hero" />
-      <Grid
-        container
-        spacing={2}
-        justifyContent={'flex-end'}
-        alignItems={'center'}
-        // className={'aboutUs'}
-      >
-        <AboutUs />
-      </Grid>
+      <div style={{ 'margin-top': '10px' }}>
+        <Grid
+          container
+          spacing={2}
+          justifyContent={'flex-end'}
+          alignItems={'center'}
+          // className={'aboutUs'}
+        >
+          <AboutUs />
+        </Grid>
+      </div>
       <Grid container>
         <Menu />
       </Grid>
