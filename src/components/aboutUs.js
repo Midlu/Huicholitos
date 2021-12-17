@@ -15,9 +15,11 @@ function AboutUs() {
   return (
     <React.Fragment>
       <Grid item xs={12} sm={12} md={7}>
-        {/* Make dynamic, grab new word of the day on refresh */}
-        <h1>Cookies</h1>
-        <p>Are very delicious, you should try some:)</p>
+        <Item>
+          {/* Make dynamic, grab new word of the day on refresh */}
+          <h1>Cookies</h1>
+          <p>Are very delicious, you should try some:)</p>
+        </Item>
       </Grid>
       <Grid item xs={12} sm={12} md={5}>
         {/* Make dynamic, grab new word of the day on refresh */}
