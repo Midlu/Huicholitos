@@ -25,7 +25,7 @@ function AboutUs() {
         {/* Make dynamic, grab new word of the day on refresh */}
         <OutlinedCard />
       </Grid>
-      <Grid container item xs justifyContent={'center'}>
+      <Grid container item xs={12} sm={12} md={12}>
         <Gallery />
       </Grid>
     </React.Fragment>
