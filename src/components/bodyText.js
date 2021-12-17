@@ -10,13 +10,13 @@ import Menu from './menu'
 function BodyText() {
   return (
     <React.Fragment>
-      <Hero name="hero" number={1054} />
+      <Hero name="hero" />
       <Grid
         container
         spacing={2}
         justifyContent={'flex-end'}
         alignItems={'center'}
-        className={'aboutUs'}
+        // className={'aboutUs'}
       >
         <AboutUs />
       </Grid>
