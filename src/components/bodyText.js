@@ -11,7 +11,7 @@ function BodyText() {
   return (
     <React.Fragment>
       <Hero />
-      <div style={{ 'margin-top': '10px' }}>
+      <div style={{ marginTop: '10px' }}>
         <Grid
           container
           spacing={2}

@@ -1,6 +1,13 @@
-import React, { useState, useCallback } from 'react'
+import React from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
-import { Grid, List, ListItemText, Typography, TextField, Box } from '@mui/material'
+import {
+  Grid,
+  List,
+  ListItemText,
+  Typography,
+  TextField,
+  Box,
+} from '@mui/material'
 import Item from './item'
 
 const center = {
@@ -9,27 +16,15 @@ const center = {
 }
 
 const containerStyle = {
-  width: '400px',
+  width: '100%',
   height: '400px',
 }
 
 const Location = () => {
-  const { isLoaded } = useJsApiLoader({
+  const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
   })
-
-  const [map, setMap] = useState(null)
-
-  const onLoad = useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds()
-    map.fitBounds(bounds)
-    setMap(map)
-  }, [])
-
-  const onUnmount = useCallback(function callback(map) {
-    setMap(null)
-  }, [])
 
   return isLoaded ? (
     <Grid
@@ -40,15 +35,17 @@ const Location = () => {
     >
       <Grid item xs={12} sm={12} md={4}>
         <Item sx={{ margin: 5 }}>
-          <GoogleMap
-            mapContainerStyle={containerStyle}
-            center={center}
-            zoom={18}
-            onLoad={onLoad}
-            onUnmount={onUnmount}
-          >
-            <Marker position={center} />
-          </GoogleMap>
+          {loadError ? (
+            <div>There was an error loading the map</div>
+          ) : (
+            <GoogleMap
+              mapContainerStyle={containerStyle}
+              center={center}
+              zoom={18}
+            >
+              <Marker position={center} />
+            </GoogleMap>
+          )}
         </Item>
       </Grid>
       <Grid item xs={12} sm={12} md={3}>

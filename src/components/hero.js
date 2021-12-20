@@ -11,15 +11,16 @@ const Hero = () => {
     // position: 'fixed',
     top: 0,
     left: 0,
-    'min-width': '100%',
-    'min-height': '100%',
+    marginTop: '100px',
+    minWidth: '100%',
+    minHeight: '100%',
     width,
     height,
   }
 
   return (
     <section style={style} className={'hero'}>
-      <Grid item style={{ 'margin-left': 0 }}>
+      <Grid item style={{ marginLeft: 0 }}>
         <LazyHero
           imageSrc={heroImage}
           // https://unsplash.it/${width}/${height}`}
