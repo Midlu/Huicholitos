@@ -15,7 +15,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: "80vw",
+  width: '80vw',
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -32,10 +32,7 @@ export default function Menu() {
 
   return (
     <React.Fragment>
-      <ImageList
-        sx={{ width: '100vw', margin: 5, 'justify-content': 'center' }}
-        cols={3}
-      >
+      <ImageList sx={{ margin: 5 }} cols={3}>
         <ImageListItem key="Subheader" cols={3}>
           <ListSubheader component="div">Huicholitos Menu</ListSubheader>
         </ImageListItem>

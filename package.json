@@ -5,18 +5,21 @@
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@googlemaps/react-wrapper": "^1.1.17",
     "@mui/icons-material": "^5.2.4",
     "@mui/material": "^5.2.4",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
+    "@react-google-maps/api": "^2.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-lazy-hero": "^2.0.0",
     "react-scripts": "^5.0.0",
     "styled-components": "^4.4.1",
-    "swiper": "^7.3.3",
     "web-vitals": "^2.1.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0"
   },
   "scripts": {
     "start": "react-scripts start",

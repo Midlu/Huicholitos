@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Container from '@mui/material/Container'
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 import ImageListItemBar from '@mui/material/ImageListItemBar'
@@ -12,24 +11,22 @@ import tamales from '../images/IMG_7279.JPG'
 
 export default function Gallery() {
   return (
-    <Container>
-      <ImageList sx={{ 'justify-content': 'center' }} cols={3}>
-        <ImageListItem key="Subheader" cols={3}>
-          <ListSubheader component="div">Some cuisine</ListSubheader>
+    <ImageList sx={{ margin: 5 }} cols={3}>
+      <ImageListItem key="Subheader" cols={3}>
+        <ListSubheader component="div">Some cuisine</ListSubheader>
+      </ImageListItem>
+      {itemData.map((item) => (
+        <ImageListItem key={item.img}>
+          <img
+            src={`${item.img}`}
+            srcSet={`${item.img}`}
+            alt={item.title}
+            loading="lazy"
+          />
+          <ImageListItemBar title={item.title} />
         </ImageListItem>
-        {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}`}
-              srcSet={`${item.img}`}
-              alt={item.title}
-              loading="lazy"
-            />
-            <ImageListItemBar title={item.title} />
-          </ImageListItem>
-        ))}
-      </ImageList>
-    </Container>
+      ))}
+    </ImageList>
   )
 }
 
