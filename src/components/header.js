@@ -55,7 +55,7 @@ class Header extends Component {
             <Toolbar style={{ color: 'black' }}>
               <HeaderItem text={'Huicholitos'} variant={'h3'} />
               <HeaderItem text={'Home'} variant={'h6'} />
-              <HeaderItem text={'Social'} variant={'h6'} />
+              <HeaderItem text={'About'} variant={'h6'} />
               <HeaderItem text={'Contact'} variant={'h6'} />
               <HeaderItem text={'Order Online'} variant={'h6'} />
             </Toolbar>

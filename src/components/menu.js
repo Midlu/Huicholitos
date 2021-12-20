@@ -4,18 +4,16 @@ import ImageListItem from '@mui/material/ImageListItem'
 import ImageListItemBar from '@mui/material/ImageListItemBar'
 import ListSubheader from '@mui/material/ListSubheader'
 import Box from '@mui/material/Box'
-import Hero from './hero'
 import Modal from '@mui/material/Modal'
 import lunch from '../images/0001.jpg'
 import breakfast from '../images/0002.jpg'
-// import endPage from '../images/0003.jpg'
 
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
+  height: '90vh',
   transform: 'translate(-50%, -50%)',
-  width: '80vw',
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -32,7 +30,7 @@ export default function Menu() {
 
   return (
     <React.Fragment>
-      <ImageList sx={{ margin: 5 }} cols={3}>
+      <ImageList sx={{ margin: 5 }} cols={2}>
         <ImageListItem key="Subheader" cols={3}>
           <ListSubheader component="div">Huicholitos Menu</ListSubheader>
         </ImageListItem>
@@ -62,7 +60,15 @@ export default function Menu() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Hero image={imageData.img} />
+          <ImageListItem>
+            <img
+              style={{ height: '90vh' }}
+              src={`${imageData.img}`}
+              srcSet={`${imageData.img}`}
+              alt={imageData.title}
+              loading="lazy"
+            />
+          </ImageListItem>
         </Box>
       </Modal>
     </React.Fragment>

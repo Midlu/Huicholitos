@@ -32,8 +32,8 @@ export default function Gallery() {
 
 const itemData = [
   { title: 'Huicholitos Rancheros', img: huicholitosRancheros },
-  { title: 'Tacos de carnitas', img: tacosDeCarnitas },
+  { title: 'Tacos de carne asada', img: tacosDeCarnitas },
   { title: 'Ceviche', img: ceviche },
-  { title: 'Tamales', img: tamales },
+  { title: 'Quesabirria', img: tamales },
   { title: 'Horchata and Tamrind', img: drinks },
 ]

@@ -21,12 +21,12 @@ const containerStyle = {
 }
 
 const Location = () => {
-  const { isLoaded, loadError } = useJsApiLoader({
+  const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
   })
 
-  return isLoaded ? (
+  return (
     <Grid
       container
       spacing={2}
@@ -35,9 +35,7 @@ const Location = () => {
     >
       <Grid item xs={12} sm={12} md={4}>
         <Item sx={{ margin: 5 }}>
-          {loadError ? (
-            <div>There was an error loading the map</div>
-          ) : (
+          {isLoaded ? (
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={center}
@@ -45,6 +43,8 @@ const Location = () => {
             >
               <Marker position={center} />
             </GoogleMap>
+          ) : (
+            'Loading Map'
           )}
         </Item>
       </Grid>
@@ -66,7 +66,7 @@ const Location = () => {
           <Box
             component="form"
             sx={{
-              '& .MuiTextField-root': { m: 1, width: '25ch' },
+              '& .MuiTextField-root': { m: 1, width: '95%' },
             }}
             noValidate
             autoComplete="off"
@@ -94,8 +94,6 @@ const Location = () => {
         </List>
       </Grid>
     </Grid>
-  ) : (
-    <></>
   )
 }
 
