@@ -1,5 +1,7 @@
 import { Component } from 'react'
 import { Grid, AppBar, Toolbar } from '@mui/material'
+import DesktopMenu from './desktopMenu'
+import MobileMenu from './mobileMenu'
 import HeaderItem from './headerItem'
 
 class Header extends Component {
@@ -7,22 +9,26 @@ class Header extends Component {
     super(props)
     this.state = {
       openMenu: false,
-      visibilityClass: '',
-      currentPage: '',
       mobile: false,
     }
   }
 
   componentDidMount() {
-    window.location.href.includes('contact') &&
-      this.setState({ currentPage: 'contactPage' })
     window.addEventListener('scroll', this.handleScroll)
+    this.checkIfMobileIsTrue()
   }
+
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
   }
 
   toggleMenu = (value) => this.setState({ openMenu: value })
+  checkIfMobileIsTrue = () => {
+    if (window.innerWidth < 992) {
+      this.setState({ mobile: true })
+    }
+  }
+
   handleScroll = () => {
     const distanceY = window.pageYOffset || document.documentElement.scrollTop,
       shrinkOn = 150,
@@ -37,14 +43,9 @@ class Header extends Component {
       headerHolder.classList.remove('smaller')
     }
   }
-  checkIfMobileIsTrue = () => {
-    const { openMenu } = this.state
-    if (window.innerWidth < 992) {
-      this.toggleMenu(!openMenu)
-    }
-  }
 
   render() {
+    const { mobile, openMenu } = this.state
     return (
       <header id="Header">
         <AppBar
@@ -55,24 +56,14 @@ class Header extends Component {
         >
           <Toolbar style={{ color: 'black' }}>
             <Grid container justifyContent="center" alignItems="center">
-              <Grid container item xs={7}>
+              <Grid container item xs={mobile ? 9 : 7}>
                 <HeaderItem text={'Huicholitos'} variant={'h3'} />
               </Grid>
-              <Grid item xs={1}>
-                <HeaderItem text={'Home'} variant={'h6'} />
-              </Grid>
-              <Grid item xs={1}>
-                <HeaderItem text={'About'} variant={'h6'} />
-              </Grid>
-              <Grid item xs={1}>
-                <HeaderItem text={'Menu'} variant={'h6'} />
-              </Grid>
-              <Grid item xs={1}>
-                <HeaderItem text={'Contact'} variant={'h6'} />
-              </Grid>
-              <Grid item xs={1}>
-                <HeaderItem text={'Order Online'} variant={'h6'} />
-              </Grid>
+              {mobile ? (
+                <MobileMenu openMenu={openMenu} toggleMenu={this.toggleMenu} />
+              ) : (
+                <DesktopMenu />
+              )}
             </Grid>
           </Toolbar>
         </AppBar>

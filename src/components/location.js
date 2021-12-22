@@ -57,7 +57,7 @@ const Location = () => {
           <ListItemText primary="(360)-539-8890" />
           <ListItemText primary="Hours" />
           <ListItemText primary="Mon-Fri 9AM - 8PM" />
-          <ListItemText primary="Sa 9AM - 8PM" />
+          <ListItemText primary="Sat 9AM - 8PM" />
           <ListItemText primary="Sunday - Closed" />
         </List>
       </Grid>
@@ -91,6 +91,7 @@ const Location = () => {
               fullWidth
               rows={4}
             />
+            <button type="submit">Submit</button>
           </Box>
         </List>
       </Grid>
