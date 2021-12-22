@@ -19,7 +19,7 @@ const Hero = () => {
   }
 
   return (
-    <section style={style} className={'hero'}>
+    <section style={style} className={'hero'} id={'Home'}>
       <Grid item style={{ marginLeft: 0 }}>
         <LazyHero
           imageSrc={heroImage}

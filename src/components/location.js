@@ -32,6 +32,7 @@ const Location = () => {
       spacing={2}
       justifyContent={'flex-end'}
       alignItems={'center'}
+      id={'Contact'}
     >
       <Grid item xs={12} sm={12} md={4}>
         <Item sx={{ margin: 5 }}>

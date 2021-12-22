@@ -3,7 +3,7 @@ import { Typography } from '@mui/material'
 function HeaderItem(props) {
   return (
     <Typography variant={props.variant} className={'menu-text'}>
-      {props.text}
+      <a href={`#${props.text}`}>{props.text}</a>
     </Typography>
   )
 }

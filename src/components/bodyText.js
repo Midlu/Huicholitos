@@ -9,9 +9,9 @@ import Menu from './menu'
 
 function BodyText() {
   return (
-    <React.Fragment>
+    <div>
       <Hero />
-      <div style={{ marginTop: '10px' }}>
+      <div style={{ marginTop: '10px' }} id={'About'}>
         <Grid
           container
           spacing={2}
@@ -20,16 +20,17 @@ function BodyText() {
         >
           <AboutUs />
         </Grid>
+        <Grid
+          container
+          spacing={2}
+          justifyContent={'flex-end'}
+          alignItems={'center'}
+          id={'Menu'}
+        >
+          <Menu />
+        </Grid>
       </div>
-      <Grid
-        container
-        spacing={2}
-        justifyContent={'flex-end'}
-        alignItems={'center'}
-      >
-        <Menu />
-      </Grid>
-    </React.Fragment>
+    </div>
   )
 }
 

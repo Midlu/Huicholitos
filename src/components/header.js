@@ -55,7 +55,7 @@ class Header extends Component {
         >
           <Toolbar style={{ color: 'black' }}>
             <Grid container justifyContent="center" alignItems="center">
-              <Grid container item xs={8}>
+              <Grid container item xs={7}>
                 <HeaderItem text={'Huicholitos'} variant={'h3'} />
               </Grid>
               <Grid item xs={1}>
@@ -63,6 +63,9 @@ class Header extends Component {
               </Grid>
               <Grid item xs={1}>
                 <HeaderItem text={'About'} variant={'h6'} />
+              </Grid>
+              <Grid item xs={1}>
+                <HeaderItem text={'Menu'} variant={'h6'} />
               </Grid>
               <Grid item xs={1}>
                 <HeaderItem text={'Contact'} variant={'h6'} />
