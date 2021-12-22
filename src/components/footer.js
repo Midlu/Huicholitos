@@ -18,10 +18,18 @@ const Footer = () => {
             <Grid container>
               <Grid item xs={12} sm={12} md={6} lg={6}>
                 <List>
-                  <ListItemText>Home</ListItemText>
-                  <ListItemText>About</ListItemText>
-                  <ListItemText>Contact</ListItemText>
-                  <ListItemText>Menu</ListItemText>
+                  <ListItemText>
+                    <a href="#Home">Home</a>
+                  </ListItemText>
+                  <ListItemText>
+                    <a href="#About">About</a>
+                  </ListItemText>
+                  <ListItemText>
+                    <a href="#Contact">Contact</a>
+                  </ListItemText>
+                  <ListItemText>
+                    <a href="#Menu">Menu</a>
+                  </ListItemText>
                 </List>
               </Grid>
               <Grid item xs={12} sm={12} md={6} lg={6}>
