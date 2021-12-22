@@ -26,12 +26,15 @@ class Header extends Component {
   handleScroll = () => {
     const distanceY = window.pageYOffset || document.documentElement.scrollTop,
       shrinkOn = 150,
-      headerEl = document.getElementById('Header')
+      headerEl = document.getElementById('Header'),
+      headerHolder = document.getElementsByClassName('headerHolder')
 
     if (distanceY > shrinkOn) {
       headerEl.classList.add('smaller')
+      headerHolder.classList.add('smaller')
     } else {
       headerEl.classList.remove('smaller')
+      headerHolder.classList.remove('smaller')
     }
   }
   checkIfMobileIsTrue = () => {
@@ -44,23 +47,32 @@ class Header extends Component {
   render() {
     return (
       <header id="Header">
-        <Grid container>
-          <AppBar
-            position="static"
-            style={{
-              background: 'transparent',
-              boxShadow: 'none',
-            }}
-          >
-            <Toolbar style={{ color: 'black' }}>
-              <HeaderItem text={'Huicholitos'} variant={'h3'} />
-              <HeaderItem text={'Home'} variant={'h6'} />
-              <HeaderItem text={'About'} variant={'h6'} />
-              <HeaderItem text={'Contact'} variant={'h6'} />
-              <HeaderItem text={'Order Online'} variant={'h6'} />
-            </Toolbar>
-          </AppBar>
-        </Grid>
+        <AppBar
+          className={'headerHolder'}
+          position="static"
+          as={'div'}
+          style={{ justifyContent: 'center' }}
+        >
+          <Toolbar style={{ color: 'black' }}>
+            <Grid container justifyContent="center" alignItems="center">
+              <Grid container item xs={8}>
+                <HeaderItem text={'Huicholitos'} variant={'h3'} />
+              </Grid>
+              <Grid item xs={1}>
+                <HeaderItem text={'Home'} variant={'h6'} />
+              </Grid>
+              <Grid item xs={1}>
+                <HeaderItem text={'About'} variant={'h6'} />
+              </Grid>
+              <Grid item xs={1}>
+                <HeaderItem text={'Contact'} variant={'h6'} />
+              </Grid>
+              <Grid item xs={1}>
+                <HeaderItem text={'Order Online'} variant={'h6'} />
+              </Grid>
+            </Grid>
+          </Toolbar>
+        </AppBar>
       </header>
     )
   }
