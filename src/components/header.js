@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { Grid, AppBar, Toolbar } from '@mui/material'
-import DesktopMenu from './desktopMenu'
+import NavMenu from './navMenu'
 import MobileMenu from './mobileMenu'
 import HeaderItem from './headerItem'
 
@@ -33,7 +33,7 @@ class Header extends Component {
     const distanceY = window.pageYOffset || document.documentElement.scrollTop,
       shrinkOn = 150,
       headerEl = document.getElementById('Header'),
-      headerHolder = document.getElementsByClassName('headerHolder')
+      headerHolder = document.getElementsByClassName('headerHolder')[0]
 
     if (distanceY > shrinkOn) {
       headerEl.classList.add('smaller')
@@ -62,7 +62,7 @@ class Header extends Component {
               {mobile ? (
                 <MobileMenu openMenu={openMenu} toggleMenu={this.toggleMenu} />
               ) : (
-                <DesktopMenu />
+                <NavMenu />
               )}
             </Grid>
           </Toolbar>
