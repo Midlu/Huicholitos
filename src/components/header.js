@@ -2,7 +2,7 @@ import { Component } from 'react'
 import { Grid, AppBar, Toolbar } from '@mui/material'
 import NavMenu from './navMenu'
 import MobileMenu from './mobileMenu'
-import HeaderItem from './headerItem'
+import { ReactComponent as LogoSVG } from "../images/logo.svg"
 
 class Header extends Component {
   constructor(props) {
@@ -33,14 +33,17 @@ class Header extends Component {
     const distanceY = window.pageYOffset || document.documentElement.scrollTop,
       shrinkOn = 150,
       headerEl = document.getElementById('Header'),
-      headerHolder = document.getElementsByClassName('headerHolder')[0]
+      headerHolder = document.getElementsByClassName('headerHolder')[0],
+      logo = document.getElementById("logo");
 
     if (distanceY > shrinkOn) {
       headerEl.classList.add('smaller')
       headerHolder.classList.add('smaller')
+      logo.classList.add('smaller')
     } else {
       headerEl.classList.remove('smaller')
       headerHolder.classList.remove('smaller')
+      logo.classList.remove('smaller')
     }
   }
 
@@ -50,14 +53,16 @@ class Header extends Component {
       <header id="Header">
         <AppBar
           className={'headerHolder'}
-          position="static"
+          position={"static"}
           as={'div'}
           style={{ justifyContent: 'center' }}
         >
           <Toolbar style={{ color: 'black' }}>
-            <Grid container justifyContent="center" alignItems="center">
+            <Grid container justify={"space-between"} alignItems={"center"}>
               <Grid container item xs={mobile ? 9 : 7}>
-                <HeaderItem text={'Huicholitos'} variant={'h3'} />
+                <a href={"#Home"} className={"logoHolder"}>
+                  <LogoSVG id={"logo"} />
+                </a>
               </Grid>
               {mobile ? (
                 <MobileMenu openMenu={openMenu} toggleMenu={this.toggleMenu} />

@@ -30,7 +30,11 @@ const Hero = () => {
           <div>
             <h1>Generic Startup Hype Headline</h1>
             <p>Some description of the restuarant</p>
-            <Button variant="contained">Call Us - (360)-539-8890</Button>
+            <Button variant="contained">
+              <a href="tel:3605398890">
+                Call Us - (360)-539-8890
+              </a>
+            </Button>
           </div>
         </LazyHero>
       </Grid>

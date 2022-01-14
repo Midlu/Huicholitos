@@ -28,9 +28,9 @@ class MobileMenu extends Component {
           id="mySidenav"
           className={`sidenav ${this.props.openMenu ? 'sidenav-open' : ''}`}
         >
-          <a className="closebtn" onClick={this.handleMobileMenu}>
+          <button className="closebtn" onClick={this.handleMobileMenu}>
             &times;
-          </a>
+          </button>
           <NavMenu handleMobileMenu={this.handleMobileMenu} />
         </div>
       </>
