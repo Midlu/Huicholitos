@@ -55,17 +55,16 @@ class Header extends Component {
           className={'headerHolder'}
           position={"static"}
           as={'div'}
-          style={{ justifyContent: 'center' }}
         >
-          <Toolbar style={{ color: 'black' }}>
-            <Grid container justify={"space-between"} alignItems={"center"}>
+          <Toolbar style={{ color: 'black', padding: '0px' }}>
+            <Grid container alignItems={"center"} style={{ textAlign: "center", alignItems: "center" }}>
               <Grid container item xs={mobile ? 9 : 7}>
                 <a href={"#Home"} className={"logoHolder"}>
                   <LogoSVG id={"logo"} />
                 </a>
               </Grid>
               {mobile ? (
-                <MobileMenu openMenu={openMenu} toggleMenu={this.toggleMenu} />
+                <MobileMenu mobile openMenu={openMenu} toggleMenu={this.toggleMenu} />
               ) : (
                 <NavMenu />
               )}

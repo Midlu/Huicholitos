@@ -18,6 +18,15 @@ const Footer = () => {
             <Grid container>
               <Grid item xs={12} sm={12} md={6} lg={6}>
                 <List>
+                  <ListItemText primary="2125 Canton Way SW, Olympia, WA 98502" />
+                  <ListItemText primary="(360)-539-8890" />
+                  <ListItemText primary="Mon-Fri 9AM - 8PM" />
+                  <ListItemText primary="Sat 9AM - 8PM" />
+                  <ListItemText primary="Sunday - Closed" />
+                </List>
+              </Grid>
+              <Grid item xs={12} sm={12} md={6} lg={6}>
+                <List>
                   <ListItemText>
                     <a href="#Home">Home</a>
                   </ListItemText>
@@ -30,15 +39,6 @@ const Footer = () => {
                   <ListItemText>
                     <a href="#Menu">Menu</a>
                   </ListItemText>
-                </List>
-              </Grid>
-              <Grid item xs={12} sm={12} md={6} lg={6}>
-                <List>
-                  <ListItemText primary="2125 Canton Way SW, Olympia, WA 98502" />
-                  <ListItemText primary="(360)-539-8890" />
-                  <ListItemText primary="Mon-Fri 9AM - 8PM" />
-                  <ListItemText primary="Sat 9AM - 8PM" />
-                  <ListItemText primary="Sunday - Closed" />
                 </List>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12}>

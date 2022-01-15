@@ -20,7 +20,7 @@ class MobileMenu extends Component {
     return (
       <>
         <Grid item xs>
-          <div onClick={this.handleMobileMenu}>
+          <div onClick={this.handleMobileMenu} className={"mobileIcon"}>
             {!this.props.openMenu ? <MenuIcon /> : <MenuOpenIcon />}
           </div>
         </Grid>
@@ -28,10 +28,10 @@ class MobileMenu extends Component {
           id="mySidenav"
           className={`sidenav ${this.props.openMenu ? 'sidenav-open' : ''}`}
         >
-          <button className="closebtn" onClick={this.handleMobileMenu}>
+          <div className="closeBtn" onClick={this.handleMobileMenu} style={{ float: "right" }}>
             &times;
-          </button>
-          <NavMenu handleMobileMenu={this.handleMobileMenu} />
+          </div>
+          <NavMenu mobile={this.props.mobile} handleMobileMenu={this.handleMobileMenu} />
         </div>
       </>
     )

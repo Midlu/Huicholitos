@@ -3,7 +3,7 @@ import HeaderItem from './headerItem'
 
 const NavMenu = (props) => {
   return (
-    <>
+    <div className={props.mobile ? "mobileMenu" : "desktopMenu"}>
       <Grid item xs={1}>
         <HeaderItem
           text={'Home'}
@@ -39,7 +39,7 @@ const NavMenu = (props) => {
           variant={'h6'}
         />
       </Grid>
-    </>
+    </div>
   )
 }
 
