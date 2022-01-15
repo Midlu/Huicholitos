@@ -12,7 +12,8 @@ const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
-  height: '90vh',
+  height: '50vh',
+  width: '35vh',
   transform: 'translate(-50%, -50%)',
   bgcolor: 'background.paper',
   border: '2px solid #000',
@@ -30,7 +31,7 @@ export default function Menu() {
 
   return (
     <React.Fragment>
-      <ImageList sx={{ margin: 5 }} cols={2}>
+      <ImageList sx={{ margin: 5 }} cols={2} style={{ textAlign: 'center', }}>
         <ImageListItem key="Subheader" cols={3}>
           <ListSubheader component="div">Huicholitos Menu</ListSubheader>
         </ImageListItem>
@@ -60,9 +61,9 @@ export default function Menu() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          {/* TODO: add circle x button on top right corner to close modal */}
           <ImageListItem>
             <img
-              style={{ height: '90vh' }}
               src={`${imageData.img}`}
               srcSet={`${imageData.img}`}
               alt={imageData.title}

@@ -30,9 +30,8 @@ const Location = () => {
     <Grid
       container
       spacing={2}
-      justifyContent={'flex-end'}
-      alignItems={'center'}
       id={'Contact'}
+      style={{ textAlign: 'center', }}
     >
       <Grid item xs={12} sm={12} md={4}>
         <Item sx={{ margin: 5 }}>
@@ -49,7 +48,7 @@ const Location = () => {
           )}
         </Item>
       </Grid>
-      <Grid item xs={12} sm={12} md={3}>
+      <Grid item xs={12} sm={12} md={3} style={{ textAlign: 'center', }}>
         <Typography as="h3">Our Hours</Typography>
         <List>
           <ListItemText primary="Huicholitos" />
@@ -61,7 +60,7 @@ const Location = () => {
           <ListItemText primary="Sunday - Closed" />
         </List>
       </Grid>
-      <Grid item xs={12} sm={12} md={5}>
+      <Grid item xs={12} sm={12} md={5} style={{ textAlign: 'center', }}>
         <Typography as="h3">Contact Us</Typography>
         <List>
           <Box

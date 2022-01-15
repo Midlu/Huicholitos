@@ -11,7 +11,7 @@ import tamales from '../images/IMG_7279.JPG'
 
 export default function Gallery() {
   return (
-    <ImageList sx={{ margin: 5 }} cols={3}>
+    <ImageList sx={{ margin: 5 }} cols={3} style={{ textAlign: 'center', }}>
       <ImageListItem key="Subheader" cols={3}>
         <ListSubheader component="div">Some cuisine</ListSubheader>
       </ImageListItem>
