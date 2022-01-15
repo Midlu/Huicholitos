@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   return (
     <section id="footer">
-      <AppBar position="static" component={'div'}>
+      <AppBar position="static" component={'div'} style={{ textAlign: "center" }}>
         <Container>
           <Toolbar>
             <Grid container>
