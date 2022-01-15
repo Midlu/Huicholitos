@@ -5,6 +5,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar'
 import ListSubheader from '@mui/material/ListSubheader'
 import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
+import Header from './headerText'
 import lunch from '../images/0001.jpg'
 import breakfast from '../images/0002.jpg'
 
@@ -33,7 +34,9 @@ export default function Menu() {
     <React.Fragment>
       <ImageList sx={{ margin: 5 }} cols={2} style={{ textAlign: 'center', }}>
         <ImageListItem key="Subheader" cols={3}>
-          <ListSubheader component="div">Huicholitos Menu</ListSubheader>
+          <ListSubheader component="div">
+            <Header text={"Huicholitos Menu"} variant={"h4"} />
+          </ListSubheader>
         </ImageListItem>
         {itemData.map((item) => (
           <ImageListItem

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Grid } from '@mui/material'
+import Grid from '@mui/material/Grid'
 import Hero from './hero'
 import AboutUs from './aboutUs'
 import Menu from './menu'

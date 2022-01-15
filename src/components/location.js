@@ -1,14 +1,13 @@
 import React from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
-import {
-  Grid,
-  List,
-  ListItemText,
-  Typography,
-  TextField,
-  Box,
-} from '@mui/material'
+import Grid from '@mui/material/Grid'
+import List from '@mui/material/List'
+import ListItemText from '@mui/material/ListItemText'
+import Typography from '@mui/material/Typography'
+import TextField from '@mui/material/TextField'
+import Box from '@mui/material/Box'
 import Item from './item'
+import Header from './headerText'
 
 const center = {
   lat: 47.0296191,
@@ -34,7 +33,7 @@ const Location = () => {
       style={{ textAlign: 'center', }}
     >
       <Grid item xs={12} sm={12} md={4}>
-        <Item sx={{ margin: 5 }}>
+        <Item sx={{ margin: 2 }}>
           {isLoaded ? (
             <GoogleMap
               mapContainerStyle={containerStyle}
@@ -49,7 +48,7 @@ const Location = () => {
         </Item>
       </Grid>
       <Grid item xs={12} sm={12} md={3} style={{ textAlign: 'center', }}>
-        <Typography as="h3">Our Hours</Typography>
+        <Header variant="h4" text={"Our Hours"} />
         <List>
           <ListItemText primary="Huicholitos" />
           <ListItemText primary="2125 Canton Way SW, Olympia, WA 98502" />
@@ -61,16 +60,9 @@ const Location = () => {
         </List>
       </Grid>
       <Grid item xs={12} sm={12} md={5} style={{ textAlign: 'center', }}>
-        <Typography as="h3">Contact Us</Typography>
+        <Header variant="h4" text={"Contact Us"} />
         <List>
-          <Box
-            component="form"
-            sx={{
-              '& .MuiTextField-root': { m: 1, width: '95%' },
-            }}
-            noValidate
-            autoComplete="off"
-          >
+          <Box component={"form"} sx={{ '& .MuiTextField-root': { m: 1, width: '95%' }, }}>
             <TextField
               id="outlined-basic"
               fullWidth
@@ -88,7 +80,7 @@ const Location = () => {
               label="Your message"
               multiline
               fullWidth
-              rows={4}
+              rows={5}
             />
             <button type="submit">Submit</button>
           </Box>

@@ -24,7 +24,7 @@ header.smaller {
 
 header {
   width: 100vw;
-  height: 7em;
+  height: 6.5em;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -32,6 +32,25 @@ header {
   z-index: 999;
   transition: height 0.3s;
   background-color: $color-lightBlue !important;
+}
+
+#footer {
+  background-color: $color-lightBlue !important;
+}
+
+.footerLocaInfo {
+  color: $color-salmon
+}
+
+.footerLinks a:link {
+  text-decoration: none;
+}
+
+.footerLinks a:hover {
+  text-decoration: underline;
+}
+.footerLinks a:active {
+  text-decoration: underline;
 }
 
 .headerHolder {
@@ -57,7 +76,7 @@ header {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: black;
   display: block;
   transition: 0.3s;
 }
@@ -81,6 +100,7 @@ header {
     width: 90%;
     display: block;
     margin: auto;
+    float: left;
 
     &.smaller {
       width: 65%;

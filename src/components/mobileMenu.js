@@ -1,8 +1,8 @@
-import { Grid } from '@mui/material'
 import { Component } from 'react'
 import NavMenu from './navMenu'
 import MenuOpenIcon from '@mui/icons-material/MenuOpen'
 import MenuIcon from '@mui/icons-material/Menu'
+import Grid from '@mui/material/Grid'
 
 class MobileMenu extends Component {
   handleMobileMenu = () => {

@@ -1,5 +1,6 @@
 import LazyHero from 'react-lazy-hero'
-import { Button, Grid } from '@mui/material'
+import Button from '@mui/material/Button'
+import Grid from '@mui/material/Grid'
 
 import heroImage from '../images/IMG_7278.JPG'
 

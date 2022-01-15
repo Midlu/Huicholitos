@@ -1,5 +1,7 @@
 import { Component } from 'react'
-import { Grid, AppBar, Toolbar } from '@mui/material'
+import Grid from '@mui/material/Grid'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
 import NavMenu from './navMenu'
 import MobileMenu from './mobileMenu'
 import { ReactComponent as LogoSVG } from "../images/logo.svg"
