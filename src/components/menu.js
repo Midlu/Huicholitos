@@ -32,14 +32,15 @@ export default function Menu() {
 
   return (
     <React.Fragment>
-      <ImageList sx={{ margin: 5 }} cols={2} style={{ textAlign: 'center', }}>
-        <ImageListItem key="Subheader" cols={3}>
-          <ListSubheader component="div">
+      <ImageList sx={{ margin: 5 }} style={{ textAlign: 'center', }}>
+        <ImageListItem key={"Subheader"} cols={3}>
+          <ListSubheader component={"div"}>
             <Header text={"Huicholitos Menu"} variant={"h4"} />
           </ListSubheader>
         </ImageListItem>
         {itemData.map((item) => (
           <ImageListItem
+            cols={2}
             key={item.img}
             onClick={() => {
               handleOpen()
@@ -50,9 +51,9 @@ export default function Menu() {
               src={`${item.img}`}
               srcSet={`${item.img}`}
               alt={item.title}
-              loading="lazy"
+              loading={"lazy"}
             />
-            <ImageListItemBar title={item.title} />
+            <ImageListItemBar title={item.title} className={"menuTitle"}/>
           </ImageListItem>
         ))}
       </ImageList>
@@ -60,8 +61,8 @@ export default function Menu() {
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        aria-labelledby={"modal-modal-title"}
+        aria-describedby={"modal-modal-description"}
       >
         <Box sx={style}>
           {/* TODO: add circle x button on top right corner to close modal */}
@@ -70,7 +71,7 @@ export default function Menu() {
               src={`${imageData.img}`}
               srcSet={`${imageData.img}`}
               alt={imageData.title}
-              loading="lazy"
+              loading={"lazy"}
             />
           </ImageListItem>
         </Box>

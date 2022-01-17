@@ -45,7 +45,7 @@ export default class Gallery extends React.Component {
               alt={item.title}
               loading="lazy"
             />
-            <ImageListItemBar title={item.title} />
+            <ImageListItemBar title={item.title} className={"menuTitle"} />
           </ImageListItem>
         ))}
       </ImageList>

@@ -53,7 +53,6 @@ class Header extends Component {
 
   render() {
     const { mobile, openMenu } = this.state
-    console.log("isMobile", mobile);
     return (
       <header id="Header">
         <AppBar

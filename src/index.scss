@@ -33,34 +33,16 @@ header.smaller {
   height: 5em;
 }
 
+.headerHolder {
+  transition: height 0.3s;
+  height: 90%;
+}
+
 .headerOpacity {
   background-color: rgba(212, 237, 244, 0.65) !important;
 }
 
-.bodyHeading {
-  color: $color-blueSubHeadings;
-}
-
-.heroButton {
-  background-color: $color-lightBlue !important;
-  a:visited,
-  a:active,
-  a:hover,
-  a:link {
-    color: $color-peopleOrange;
-    text-decoration: none;
-  }
-}
-
-#footer {
-  background-color: $color-lightBlue !important;
-}
-
-.footerLocaInfo {
-  color: $color-peopleOrange;
-}
-
-.menuText {
+.headerText {
   a,
   a:visited,
   a:active,
@@ -70,48 +52,6 @@ header.smaller {
     text-decoration: none;
     font-size: 1.5em;
   }
-}
-
-.footerLinks span {
-  a:visited,
-  a:active,
-  a:hover,
-  a:link {
-    color: $color-peopleOrange;
-    text-decoration: none;
-  }
-}
-
-.headerHolder {
-  transition: height 0.3s;
-  height: 90%;
-}
-
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: $color-salmon; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav-open {
-  width: 250px;
 }
 
 .logoHolder {
@@ -143,6 +83,85 @@ header.smaller {
         transform: translate(-50px, 10px);
       }
     }
+  }
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: $color-salmon; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav-open {
+  width: 250px;
+}
+
+.heroButton {
+  background-color: $color-lightBlue !important;
+  a:visited,
+  a:active,
+  a:hover,
+  a:link {
+    color: $color-peopleOrange;
+    text-decoration: none;
+  }
+}
+
+.bodyHeading {
+  color: $color-blueSubHeadings;
+}
+
+.menuTitle {
+  div {
+    color: $color-salmon !important;
+  }
+}
+
+.formHolder {
+  label {
+    color: $color-salmon !important;
+  }
+  fieldset {
+    border: 2px solid $color-marigold !important;
+  }
+  .submitButton {
+    color: $color-salmon;
+    background-color: $color-lightBlue;
+  }
+}
+
+#footer {
+  background-color: $color-lightBlue !important;
+}
+
+.footerLocaInfo {
+  color: $color-peopleOrange;
+}
+
+.footerLinks span {
+  a:visited,
+  a:active,
+  a:hover,
+  a:link {
+    color: $color-peopleOrange;
+    text-decoration: none;
   }
 }
 

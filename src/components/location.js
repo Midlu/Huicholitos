@@ -1,12 +1,13 @@
-import React from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import Grid from '@mui/material/Grid'
 import List from '@mui/material/List'
 import ListItemText from '@mui/material/ListItemText'
 import TextField from '@mui/material/TextField'
 import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
 import Item from './item'
 import Header from './headerText'
+import useForm from '../hooks/useForm';
 
 const center = {
   lat: 47.0296191,
@@ -19,6 +20,11 @@ const containerStyle = {
 }
 
 const Location = () => {
+  const [values, handleChange] = useForm({ name: "", email: "", message: "" })
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(values);
+  }
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
@@ -61,27 +67,35 @@ const Location = () => {
       <Grid item xs={12} sm={12} md={5} style={{ textAlign: 'center', }}>
         <Header variant="h4" text={"Contact Us"} />
         <List>
-          <Box component={"form"} sx={{ '& .MuiTextField-root': { m: 1, width: '95%' }, }}>
+          <Box component={"form"} className={"formHolder"} sx={{ '& .MuiTextField-root': { m: 1, width: '95%' }, }} onSubmit={handleSubmit}>
             <TextField
-              id="outlined-basic"
               fullWidth
-              label="Full Name"
-              variant="outlined"
+              label={"Full Name"}
+              variant={"outlined"}
+              name={'name'}
+              value={values.name}
+              onChange={handleChange}
             />
             <TextField
-              id="outlined-basic"
               fullWidth
-              label="Email Address"
-              variant="outlined"
+              label={"Email Address"}
+              variant={"outlined"}
+              name={"email"}
+              value={values.email}
+              onChange={handleChange}
             />
             <TextField
-              id="outlined-multiline-static"
-              label="Your message"
+              label={"Your message"}
               multiline
+              name={"message"}
               fullWidth
               rows={5}
+              value={values.message}
+              onChange={handleChange}
             />
-            <button type="submit">Submit</button>
+            <Button type={"submit"} className={"submitButton"}>
+              Submit
+            </Button>
           </Box>
         </List>
       </Grid>
