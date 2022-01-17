@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import NavMenu from './navMenu'
+import HeaderItem from './headerItem'
 import MenuOpenIcon from '@mui/icons-material/MenuOpen'
 import MenuIcon from '@mui/icons-material/Menu'
 import Grid from '@mui/material/Grid'
@@ -31,7 +31,43 @@ class MobileMenu extends Component {
           <div className="closeBtn" onClick={this.handleMobileMenu} style={{ float: "right" }}>
             &times;
           </div>
-          <NavMenu mobile={this.props.mobile} handleMobileMenu={this.handleMobileMenu} />
+          <Grid container direction={"column"} alignItems={"flex-start"}>
+            <Grid item xs={1}>
+              <HeaderItem
+                text={'Home'}
+                onClickFunc={this.handleMobileMenu}
+                variant={'h6'}
+              />
+            </Grid>
+            <Grid item xs={1}>
+              <HeaderItem
+                text={'About'}
+                onClickFunc={this.handleMobileMenu}
+                variant={'h6'}
+              />
+            </Grid>
+            <Grid item xs={1}>
+              <HeaderItem
+                text={'Menu'}
+                onClickFunc={this.handleMobileMenu}
+                variant={'h6'}
+              />
+            </Grid>
+            <Grid item xs={1}>
+              <HeaderItem
+                text={'Contact'}
+                onClickFunc={this.handleMobileMenu}
+                variant={'h6'}
+              />
+            </Grid>
+            <Grid item xs={1}>
+              <HeaderItem
+                text={'Order Online'}
+                onClickFunc={this.handleMobileMenu}
+                variant={'h6'}
+              />
+            </Grid>
+          </Grid>
         </div>
       </>
     )

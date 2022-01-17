@@ -1,7 +1,7 @@
 import LazyHero from 'react-lazy-hero'
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
-
+import Header from './headerText'
 import heroImage from '../images/IMG_7278.JPG'
 
 const Hero = () => {
@@ -29,11 +29,11 @@ const Hero = () => {
           opacity={0.3}
         >
           <div>
-            <h1>Generic Startup Hype Headline</h1>
+            <Header variant="h4" text={"Some description about us."} />
             <p>Some description of the restuarant</p>
-            <Button variant="contained">
+            <Button className={"heroButton"}>
               <a href="tel:3605398890">
-                Call Us - (360)-539-8890
+                Give us a call: (360)-539-8890
               </a>
             </Button>
           </div>

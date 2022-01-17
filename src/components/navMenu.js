@@ -3,7 +3,7 @@ import HeaderItem from './headerItem'
 
 const NavMenu = (props) => {
   return (
-    <Grid container direction={props.mobile ? "column" : "row"} className={props.mobile ? "mobileMenu" : "desktopMenu"}>
+    <>
       <Grid item xs={1}>
         <HeaderItem
           text={'Home'}
@@ -32,14 +32,14 @@ const NavMenu = (props) => {
           variant={'h6'}
         />
       </Grid>
-      <Grid item xs={1}>
+      <Grid item xs={2}>
         <HeaderItem
           text={'Order Online'}
           onClickFunc={props.handleMobileMenu}
           variant={'h6'}
         />
       </Grid>
-    </Grid>
+    </>
   )
 }
 
