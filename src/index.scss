@@ -18,19 +18,19 @@ code {
     monospace;
 }
 
-header.smaller {
-  height: 4.5em;
-}
-
 header {
   width: 100vw;
-  height: 6.5em;
+  height: 7em;
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
   transition: height 0.3s;
+}
+
+header.smaller {
+  height: 5em;
 }
 
 .headerOpacity {
@@ -116,31 +116,31 @@ header {
 
 .logoHolder {
   width: 100%;
-  height: 100%;
   svg {
-    width: 100%;
+    width: 115%;
     height: 100%;
     transition: 0.3s;
     &#boy {
-      transform: translate(0px, -14px);
+      transform: translate(-15px, -10px);
     }
     &#logo {
-      transform: translate(-20px, 1px);
+      transform: translate(-30px, 1px);
     }
     &#girl {
-      transform: translate(-30px, 1px);
+      transform: translate(-30px, 9px);
     }
 
     &.smaller {
+      width: 100%;
       transition: 0.3s;
       &#boy {
-        transform: translate(0px, -12px);
+        transform: translate(-20px, -5px);
       }
       &#logo {
-        transform: translate(-20px, -3px);
+        transform: translate(-40px, 2px);
       }
       &#girl {
-        transform: translate(-30px, 5px);
+        transform: translate(-50px, 10px);
       }
     }
   }
@@ -153,9 +153,9 @@ header {
 
 .mobileIcon {
   svg {
-    transform: translate(0px, 1px);
+    transform: translate(0px, 2px);
     &.smaller {
-      transform: translate(0px, 4px);
+      transform: translate(0px, 5px);
     }
   }
 }
@@ -166,7 +166,7 @@ header {
 
 @media screen and (min-width: 800px) {
   header {
-    height: 8em;
+    height: 7.5em;
   }
 
   header.smaller {
@@ -180,10 +180,10 @@ header {
         transform: translate(-50px, -20px);
       }
       &#logo {
-        transform: translate(-125px, 0px);
+        transform: translate(-135px, 0px);
       }
       &#girl {
-        transform: translate(-175px, 7px);
+        transform: translate(-200px, 7px);
       }
 
       &.smaller {
@@ -192,10 +192,10 @@ header {
           transform: translate(-50px, -20px);
         }
         &#logo {
-          transform: translate(-150px, 0px);
+          transform: translate(-155px, 0px);
         }
         &#girl {
-          transform: translate(-225px, 3px);
+          transform: translate(-240px, 3px);
         }
       }
     }
@@ -203,30 +203,42 @@ header {
 
   .mobileIcon {
     svg {
-      transform: translate(0px, 4px);
+      transform: translate(0px, 8px);
       &.smaller {
-        transform: translate(0px, 13px);
+        transform: translate(0px, 12px);
       }
     }
   }
 }
 
 @media screen and (min-width: 1000px) {
+  header {
+    height: 8em;
+  }
   header.smaller {
     height: 6.5em;
+  }
+  .menuText {
+    a,
+    a:visited,
+    a:active,
+    a:hover,
+    a:link {
+      font-size: 1.25em;
+    }
   }
 
   .logoHolder {
     svg {
-      width: 100%;
+      width: 110%;
       &#boy {
-        transform: translate(-25px, -18px);
+        transform: translate(-25px, -24px);
       }
       &#logo {
-        transform: translate(-60px, 1px);
+        transform: translate(-60px, -8px);
       }
       &#girl {
-        transform: translate(-75px, 5px);
+        transform: translate(-75px, 6px);
       }
 
       &.smaller {
@@ -235,10 +247,10 @@ header {
           transform: translate(-25px, -20px);
         }
         &#logo {
-          transform: translate(-60px, -11px);
+          transform: translate(-75px, -11px);
         }
         &#girl {
-          transform: translate(-75px, 6px);
+          transform: translate(-105px, 6px);
         }
       }
     }
