@@ -54,7 +54,7 @@ export default class Gallery extends React.Component {
 }
 
 const itemData = [
-  { title: 'Huicholitos Rancheros', img: huicholitosRancheros },
+  { title: 'Chilaquiles', img: huicholitosRancheros },
   { title: 'Tacos de carne asada', img: tacosDeCarnitas },
   { title: 'Ceviche', img: ceviche },
   { title: 'Quesabirria', img: tamales },
