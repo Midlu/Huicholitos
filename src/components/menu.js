@@ -12,7 +12,7 @@ const Menu = () => (
     <ImageListItem key={"Subheader"} cols={3}>
       <ListSubheader component={"div"}>
         <Header text={"Huicholitos Menu"} variant={"h4"} />
-        <a href={"#Download_Menu"}>Download Our Menu</a>
+        <a className={"peopleOrange"} target={"_blank"} href={"https://raw.githubusercontent.com/Midlu/Huicholitos/master/src/images/Huicholitos%20Menu%201.3.22.pdf"}>Download Our Menu</a>
       </ListSubheader>
     </ImageListItem>
     {itemData.map((item) => (

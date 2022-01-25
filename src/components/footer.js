@@ -15,7 +15,7 @@ const Footer = () => {
           <Toolbar>
             <Grid container>
               <Grid item xs={12} sm={12} md={6} lg={6}>
-                <List className={"footerLocaInfo"}>
+                <List className={"peopleOrange"}>
                   <ListItemText primary="2125 Canton Way SW, Olympia, WA 98502" />
                   <ListItemText primary="(360)-539-8890" />
                   <ListItemText primary="Mon-Fri 9AM - 8PM" />
