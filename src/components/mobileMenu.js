@@ -5,16 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Grid from '@mui/material/Grid'
 
 class MobileMenu extends Component {
-  handleMobileMenu = () => {
-    const rootEl = document.getElementById('root')
-    if (!this.props.openMenu) {
-      rootEl.classList.add('move-root')
-    } else {
-      rootEl.classList.remove('move-root')
-    }
-
-    this.props.toggleMenu(!this.props.openMenu)
-  }
+  handleMobileMenu = () => this.props.toggleMenu(!this.props.openMenu)
 
   render() {
     return (
@@ -28,8 +19,8 @@ class MobileMenu extends Component {
           id="mySidenav"
           className={`sidenav ${this.props.openMenu ? 'sidenav-open' : ''}`}
         >
-          <div className="closeBtn" onClick={this.handleMobileMenu} style={{ float: "right" }}>
-            &times;
+          <div onClick={this.handleMobileMenu} style={{ float: "right" }}>
+            <a href="#closeBtn" className="closebtn" onClick={this.handleMobileMenu}>&times;</a>
           </div>
           <Grid container direction={"column"} alignItems={"flex-start"}>
             <Grid item xs={1}>

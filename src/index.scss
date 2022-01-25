@@ -113,6 +113,15 @@ header.smaller {
   width: 250px;
 }
 
+.sidenav .closebtn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 .heroButton {
   background-color: $color-lightBlue !important;
   a:visited,
@@ -165,8 +174,7 @@ header.smaller {
   }
 }
 
-.mobileIcon,
-.closeBtn {
+.mobileIcon {
   cursor: pointer;
 }
 
