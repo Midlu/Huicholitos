@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
-import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
 const bull = (
@@ -23,28 +23,30 @@ const dictionary = [
 
 const data = dictionary.at(Math.floor(Math.random() * dictionary.length))
 
-export default function OutlinedCard() {
-  return (
-    <Box sx={{ margin: 5 }}>
-      <Card variant="outlined">
-        <CardContent>
-          <Typography color="text.secondary" gutterBottom>
-            Word of the Day
-          </Typography>
-          <Typography variant="h5" component="div">
-            {data.pronunciation}
-          </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            {data.semanticRole}
-          </Typography>
-          <Typography variant="body2">
-            {data.definition}
-          </Typography>
-        </CardContent>
-        <CardActions style={{ justifyContent: "center" }}>
-          <Button className={"heroButton"} size="small"><a href={data.link}>Learn More</a></Button>
-        </CardActions>
-      </Card>
-    </Box>
-  )
-}
+const OutlinedCard = () => (
+  <Box sx={{ margin: 5 }}>
+    <Card variant="outlined">
+      <CardContent>
+        <Typography variant={"h4"} gutterBottom>
+          Word of the Day
+        </Typography>
+        <Typography variant={"h5"} component={"div"}>
+          {data.pronunciation}
+        </Typography>
+        <Typography sx={{ mb: 1.5 }}>
+          {data.semanticRole}
+        </Typography>
+        <Typography variant={"body2"}>
+          {data.definition}
+        </Typography>
+      </CardContent>
+      <CardActions style={{ justifyContent: "center" }}>
+        <Button className={"heroButton"} size={"small"}>
+          <a href={data.link}>Learn More</a>
+        </Button>
+      </CardActions>
+    </Card>
+  </Box>
+)
+
+export default OutlinedCard;
