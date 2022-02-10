@@ -12,37 +12,39 @@ const bull = (
   </Box>
 )
 
-const card = (
-  <React.Fragment>
-    <CardContent>
-      <Typography color="text.secondary" gutterBottom>
-        Word of the Day
-      </Typography>
-      <Typography variant="h5" component="div">
-        Hui{bull}cho{bull}li{bull}tos
-      </Typography>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        adjective
-      </Typography>
-      <Typography variant="body2">
-        An indigenous people of Mexico and the United States living in the
-        Sierra Madre Occidental range in the states of Nayarit, Jalisco,
-        Zacatecas, and Durango, as well as in the United States in the states of
-        California, Arizona, New Mexico, and Texas.
-        <br />
-        {'"Use in a sentence"'}
-      </Typography>
-    </CardContent>
-    <CardActions >
-      <Button size="small">Learn More</Button>
-    </CardActions>
-  </React.Fragment>
-)
+const dictionary = [
+  {
+    pronunciation: <>Hui{bull}cho{bull}li{bull}tos</>,
+    semanticRole: "adjective",
+    definition: "An indigenous people of Mexico and the United States living in the Sierra Madre Occidental range in the states of Nayarit, Jalisco, Zacatecas, and Durango, as well as in the United States in the states of California, Arizona, New Mexico, and Texas.",
+    link: "https://en.wikipedia.org/wiki/Huichol"
+  }
+]
+
+const data = dictionary.at(Math.floor(Math.random() * dictionary.length))
 
 export default function OutlinedCard() {
   return (
     <Box sx={{ margin: 5 }}>
-      <Card variant="outlined">{card}</Card>
+      <Card variant="outlined">
+        <CardContent>
+          <Typography color="text.secondary" gutterBottom>
+            Word of the Day
+          </Typography>
+          <Typography variant="h5" component="div">
+            {data.pronunciation}
+          </Typography>
+          <Typography sx={{ mb: 1.5 }} color="text.secondary">
+            {data.semanticRole}
+          </Typography>
+          <Typography variant="body2">
+            {data.definition}
+          </Typography>
+        </CardContent>
+        <CardActions style={{ justifyContent: "center" }}>
+          <Button className={"heroButton"} size="small"><a href={data.link}>Learn More</a></Button>
+        </CardActions>
+      </Card>
     </Box>
   )
 }

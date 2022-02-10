@@ -7,11 +7,11 @@ import Item from './item'
 function AboutUs() {
   return (
     <React.Fragment>
-      <Grid item xs={12} sm={12} md={4} style={{ textAlign: 'center', }}>
+      <Grid item xs={12} sm={12} md={5} style={{ textAlign: 'center', }}>
         {/* Make dynamic, grab new word of the day on refresh */}
         <OutlinedCard />
       </Grid>
-      <Grid item xs={12} sm={12} md={8}>
+      <Grid item xs={12} sm={12} md={7}>
         <Item sx={{ margin: 5 }}>
           {/* Make dynamic, grab new word of the day on refresh */}
           <h1>Cookies</h1>
