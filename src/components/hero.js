@@ -9,34 +9,31 @@ const Hero = () => {
   const height = window.innerHeight
 
   const style = {
-    // position: 'fixed',
     top: 0,
     left: 0,
     marginTop: '100px',
     minWidth: '100%',
     minHeight: '100%',
     width,
-    height,
+    height
   }
 
   return (
-    <section style={style} className={'hero'} id={'Home'}>
-      <Grid item style={{ marginLeft: 0 }}>
+    <section className={'hero'} id={'Home'}>
+      <Grid item>
         <LazyHero
           imageSrc={heroImage}
-          // https://unsplash.it/${width}/${height}`}
           style={style}
-          opacity={0.3}
+          parallaxOffset={100}
+          className={"heroImageContainer"}
         >
-          <div>
-            <Header variant="h4" text={"Some description about us."} />
-            <p>Some description of the restuarant</p>
-            <Button className={"heroButton"}>
+          <Header variant="h4" text={"Welcome to our authentic Huichole Mexican Cuisine."} />
+          <p>Enjoy our delicious food we love to make.</p>
+          <Button className={"heroButton"}>
               <a href="tel:3605398890">
                 Give us a call: (360)-539-8890
               </a>
-            </Button>
-          </div>
+          </Button>
         </LazyHero>
       </Grid>
     </section>

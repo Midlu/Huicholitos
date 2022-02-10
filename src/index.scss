@@ -122,6 +122,14 @@ header.smaller {
   margin-left: 50px;
 }
 
+.heroImageContainer div:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.3);
+  p {
+    color: white;
+    font-size: 1.3em;
+  }
+}
+
 .heroButton {
   background-color: $color-lightBlue !important;
   a:visited,
@@ -130,11 +138,12 @@ header.smaller {
   a:link {
     color: $color-peopleOrange;
     text-decoration: none;
+    font-size: 1.2em;
   }
 }
 
 .bodyHeading {
-  color: $color-blueSubHeadings;
+  color: $color-salmon;
 }
 
 .menuTitle {
